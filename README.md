@@ -2,7 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
@@ -77,3 +77,69 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+## Jawaban Soal A
+
+1. Apakah ada batasan atau preferensi desain tertentu yang harus diperhatikan dalam implementasi fitur ini?
+2. Apa tolak ukur keberhasilan dari fitur ini?
+3. Apakah ada keterkaitan khusus dengan fitur atau modul lain dalam produk yang sama?
+
+## Jawaban Soal C1
+
+1. Struktur Data:
+
+- Gunakan struktur data graf untuk merepresentasikan koneksi antar pengguna dan komunitas.
+- Simpan informasi hubungan dengan representasi graf, di mana simpul adalah pengguna atau komunitas, dan tepi adalah koneksi antara mereka.
+
+2. Algoritma Pencarian Relevan:
+
+- Mengimplementasi algoritma pencarian graf untuk menemukan pengguna atau komunitas yang memiliki koneksi dengan pengguna yang ditargetkan.
+- Mempertimbangkan faktor seperti kesamaan minat, aktivitas, dan interaksi sebelumnya.
+- Jika pengguna tidak memiliki koneksi atau tidak terkait dengan komunitas apa pun, gunakan strategi umum berdasarkan tren atau popularitas umum. Jika pengguna memiliki terlalu banyak koneksi, menggunakan sistem prioritas berdasarkan kedekatan dan frekuensi interaksi pengguna.
+
+3. Dinamika Pembaruan Data:
+
+- Susun mekanisme pembaruan data secara berkala untuk mencerminkan perubahan dinamis dalam koneksi pengguna dan komunitas.
+- Hindari pembaruan menyeluruh dengan memanfaatkan teknik pembaruan sebagian (incremental update).
+
+4. Pengoptimalan Kinerja:
+
+- Lakukan pengoptimalan kueri untuk mengurangi beban server dan memastikan respon cepat pada skala besar.
+- Gunakan teknik caching untuk mengurangi waktu latensi.
+
+5. Pengujian:
+
+- Melakukan unit testing dan integrasi secara menyeluruh untuk memastikan kestabilan fitur.
+- Gunakan uji kinerja untuk mengevaluasi respons dan skalabilitas fitur dalam skenario beban tinggi.
+
+## Jawaban Soal C2
+
+1. Inisialisasi Graf Koneksi:
+
+- Bangun graf yang merepresentasikan koneksi antar pengguna dan komunitas.
+- Setiap pengguna atau komunitas menjadi simpul dalam graf, dan tepi mewakili koneksi.
+
+2. Kalkulasi Koneksi:
+
+- Hitung kedekatan antara pengguna target dan simpul lain dalam graf.
+- Pertimbangkan faktor seperti aktivitas bersama, kesamaan minat, dan sejarah interaksi.
+- Beri bobot pada koneksi berdasarkan tingkat kedekatan.
+- Prioritaskan koneksi dengan kedekatan yang lebih tinggi untuk mendapatkan rekomendasi yang lebih relevan.
+
+3. Identifikasi komunitas dan trending:
+
+- Jika tidak ada koneksi yang memenuhi persyaratan, berikan rekomendasi umum berdasarkan tren populer atau aktivitas umum pengguna.
+- Temukan komunitas di sekitar pengguna target berdasarkan struktur graf.
+- Ambil simpul yang terkait dengan pengguna dan hitung tingkat keterlibatan dalam komunitas tersebut.
+- Gabungkan rekomendasi dari koneksi individu dan komunitas.
+- Prioritaskan orang yang memiliki kedekatan tinggi dan aktif di komunitas yang relevan.
+
+4. Pertimbangkan Aktivitas Terkini:
+
+- Berikan bobot ekstra pada koneksi atau komunitas yang terlibat dalam aktivitas terkini pengguna.
+- Pastikan bahwa rekomendasi mencerminkan keadaan terkini pengguna.
+
+5. Evaluasi Periodik:
+
+- Lakukan evaluasi periodik terhadap performa algoritma menggunakan metrik keberhasilan dan respons pengguna.
+- Sesuaikan parameter atau strategi algoritma berdasarkan hasil evaluasi.

@@ -5,7 +5,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import FeedScreen from './screens/FeedScreen';
 import PostDetailScreen from './screens/PostDetailScreen';
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  feed: undefined;
+  'post-detail': {id: number};
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App() {
   return (
